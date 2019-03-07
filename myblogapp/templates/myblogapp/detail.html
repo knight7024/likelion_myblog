@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container jumbotron">
+    <h1>{{ blog.title }}</h1>
+    <p>{{ blog.pub_date }}</p>
+    <p>by {{ blog.is_authorized }}</p>
+    <p>{{ blog.body }}</p>
+    <p><a href="{% url 'index' %}">back</a>
+</div>
+{% endblock %}
