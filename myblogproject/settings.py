@@ -123,13 +123,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'portfolioapp', 'static'),
-    os.path.join(BASE_DIR, 'myblogproject', 'static')
+    # os.path.join(BASE_DIR, 'portfolioapp', 'static'),
+    # os.path.join(BASE_DIR, 'myblogproject', 'static')
+    os.path.join(BASE_DIR, 'static'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 MEDIA_URL = '/media/'
 
 
