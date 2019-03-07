@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'v(@7qq$l0exf=5=i@j^9w@bg3@4(@&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myblogapp.apps.MyblogappConfig',
-    'portfolioapp.apps.PortfolioappConfig',
-    'accounts.apps.AccountsConfig',
+    'myblogapp',
+    'portfolioapp',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +137,6 @@ MEDIA_URL = '/media/'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
